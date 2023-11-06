@@ -1,10 +1,12 @@
 #pragma once
 #include <vector>
 
-struct Foo
+namespace strategy
 {
-    int operator()(int a,int b)
+    class SortStrategy
     {
-        return a +b;
-    }
-};
+    public:
+        virtual void sort(std::vector<int> &) = 0;
+        virtual ~SortStrategy() = default;
+    };
+} // namespace strategy

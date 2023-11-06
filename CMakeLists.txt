@@ -7,8 +7,12 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror -Wpedantic -Wunused")
 
-set(SOURCES src/SortStrategy.cpp)
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/include)
+
+set(SOURCES
+    src/Sort/BubbleSort.cpp
+    src/Sort/QuickSort.cpp
+    src/SortingContext.cpp)
 
 include_directories(${COMMON_INCLUDES})
 
